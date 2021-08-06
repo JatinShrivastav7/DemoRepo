@@ -24,7 +24,7 @@ public class EmployeeController {
 	
 	//Get method to get all employee details
 	
-	@GetMapping("/employee_details")
+	@GetMapping("/employeeDetails")
 	public ResponseEntity<List<Employee>> getEmployeeDetails()
 	{
 		
@@ -40,7 +40,7 @@ public class EmployeeController {
 	
 	//Get method to get Employee details by id
 	
-	@GetMapping("/employee_details/{employee_id}")
+	@GetMapping("/employeeDetails/{employee_id}")
     public ResponseEntity<Employee> getEmployeeDetailsById(@PathVariable String employee_id)
     {
     	Employee empAttributes=this.employeeService.employeeDetailsById(Integer.parseInt(employee_id));
@@ -53,7 +53,7 @@ public class EmployeeController {
 
 	//Post method to add new employee details
 	
-	@PostMapping("/add_details")
+	@PostMapping("/addDetails")
 	public ResponseEntity<Employee> addEmployeeDetails(@RequestBody Employee employeeAttributeBody)
 	{
 	  Employee empAttributes=null;
@@ -71,7 +71,7 @@ public class EmployeeController {
 	
 	//Put method to update existing employee details
 	
-	@PutMapping("/update_details")
+	@PutMapping("/updateDetails")
 	public ResponseEntity<Employee> updateEmployeeDetails(@RequestBody Employee employeeAttributeBody)
 	{
 		Employee empAttributes=null;
@@ -87,7 +87,7 @@ public class EmployeeController {
 	
 	//Delete method to delete employee details
 	
-	@DeleteMapping("/delete_details/{employee_id}")
+	@DeleteMapping("/deleteDetails/{employee_id}")
 	public ResponseEntity<HttpStatus> deleteEmployeeDetails(@PathVariable String employee_id)
 	{
 		try {
